@@ -17,8 +17,10 @@ public class InsertData {
         try {
             connection.setAutoCommit(false);
             InsertData insertData = new InsertData();
+            System.out.println("Save point: " + connection.setSavepoint());
             insertData.insertUserTable(connection, "ngangavictor10@gmail.com", insertData.generatePassword());
             insertData.insertDetailsTable(connection, "ngangavictor10@gmail.com", "Victor Nganga", "30", "Kenya");
+
             connection.commit();
         } catch (Exception e) {
             connection.rollback();
