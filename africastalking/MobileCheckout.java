@@ -10,8 +10,8 @@ public class MobileCheckout {
 
     public static void main(String[] args){
         /* Set your app credentials */
-        String USERNAME = "sandbox";
-        String API_KEY = "2ce68a356dd89ac1bed520d8dc4390dde575b03d0818e08702a7afe5f7785644";
+        String USERNAME = Secrets.username;
+        String API_KEY = Secrets.apiKey;
 
         /* Initialize SDK */
         AfricasTalking.initialize(USERNAME, API_KEY);
@@ -20,10 +20,10 @@ public class MobileCheckout {
         PaymentService payment = AfricasTalking.getService(AfricasTalking.SERVICE_PAYMENT);
 
         /* Set the name of your Africa's Talking payment product */
-        String productName = "house listing";
+        String productName = Secrets.productName;
 
         /* Set the phone number you want to send to in international format */
-        String phoneNumber = "+2547";
+        String phoneNumber = "+254700352822";
 
         /* Set The 3-Letter ISO currency code and the checkout amount */
         String currencyCode = "KES";
@@ -34,7 +34,7 @@ public class MobileCheckout {
 			This metadata will be included when we send back the final payment notification
 		*/
         HashMap<String, String> metadata = new HashMap<String, String>();
-        metadata.put("account", "-oc4m9um34xu2r89u8925u");
+        metadata.put("account", "-oc4m9um34xu2r89u84925u");
 
         /* That's it hit send and we'll take care of the rest */
         try {
