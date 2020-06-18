@@ -33,7 +33,7 @@ public class MobileCheckout {
 			Set any metadata that you would like to send along with this request.
 			This metadata will be included when we send back the final payment notification
 		*/
-        HashMap<String, String> metadata = new HashMap<String, String>();
+        HashMap<String, String> metadata = new HashMap<>();
         metadata.put("account", "-oc4m9um34xu2r89u84925u");
 
         /* That's it hit send and we'll take care of the rest */
